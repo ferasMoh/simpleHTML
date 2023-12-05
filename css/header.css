@@ -1,0 +1,157 @@
+/* Header Styles */
+/* 
+   Header contains two parts,
+   Part-1 has logo image and h1
+   part-2 has search input and buttons
+*/
+
+
+/* flex-box for Header, Part-1, Part-2, Search-Form */
+.header,
+.header-part-1,
+.header-part-2,
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Whole Header body */
+.header {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--header-bg-color);
+    overflow: hidden;
+    color: white;
+    height: 70px;
+}
+
+/* Part-2 Logo Image */
+.header .header-part-1 img {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+/* Header Title */
+.header .header-part-1 h1 {
+    font-family: 'Black Ops One';
+    font-size: 30px;
+    background-image: linear-gradient(white 30%, rgb(148, 148, 236));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Part-2 Search Form */
+.search-form {
+    margin-right: 10px;
+    height: 30px;
+}
+
+/* Part-2 Search icon */
+.search-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+/* Part-2 Search input */
+.header .header-part-2 input {
+    width: 200px;
+    height: 40px;
+    border: 1px solid wheat;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px white;
+    font-size: 15px;
+}
+
+
+/* Part 2 Buttons ( Login , Sign-up ) */
+.login-button,
+.sign-up-button {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    background-color: var(--button-bg-color);
+    font-weight: 800;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #6855c5;
+}
+
+.login-button:hover {
+    background-color: #6d59d3;
+    animation: Rotate 1.5s alternate;
+}
+
+.sign-up-button:hover {
+    background-color: #6d59d3;
+    animation: Rotate 1s alternate-reverse;
+}
+
+
+/* Part-2 hide the line under buttons labels */
+.header .header-part-2 button a {
+    text-decoration: none;
+    color: white;
+}
+
+.header .header-part-2 button a:hover {
+    color: rgb(233, 202, 202);
+}
+
+
+/* Animation for login button */
+@keyframes Rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/* ///////  Responsive  //////// */
+
+@media (max-width:800px) {
+    .header .header-part-1 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .header-part-1 h1 {
+        font-size: 20px;
+    }
+
+    .header .header-part-2 input {
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .search-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header .header-part-2 button {
+        width: 60px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+}

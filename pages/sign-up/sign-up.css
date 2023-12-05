@@ -1,0 +1,154 @@
+/* Sign-up Styles */
+
+/* import New Font 'Tilt Neon' */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+/* Page Body */
+body {
+    background-image: url(../../images/cover.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+}
+
+/* flex-box for Page Body and Sign-up Form */
+body,
+.Sign-up-container,
+.Sign-up-form,
+.Sign-up-form div,
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Sign-up Container */
+.Sign-up-container {
+    width: 65%;
+    height: 65%;
+    background-color: rgb(81, 143, 236);
+    color: rgb(12, 45, 94);
+    border: 2px solid aqua;
+    border-radius: 15px;
+}
+
+/* margin to Sign-Up Title */
+.Sign-up-container h1 {
+    margin: 10px;
+}
+
+/* Sign-up Form */
+.Sign-up-form {
+    border: none;
+    width: 100%;
+    height: 70%;
+    font-size: 25px;
+}
+
+/* Div inside Sign-up Form that contians registeration fields */
+.Sign-up-form div {
+    width: 70%;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* All Registeration Fields */
+.Sign-up-form input {
+    width: 80%;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Create Account Button */
+.Sign-up-form button {
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 800;
+    margin-top: 10px;
+    background-color: rgb(64 107 211);
+    color: white;
+    box-shadow: 5px 5px 10px rgb(43, 56, 56);
+}
+
+.Sign-up-form button:hover {
+    background-color: rgb(33, 33, 58);
+    color: cadetblue;
+    animation: Move 1s 1 alternate;
+}
+
+/* anchor links styles*/
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    font-size: 15px;
+    margin: 5px;
+    color: whitesmoke;
+}
+
+.links a:hover {
+    color: rgb(97, 15, 173);
+}
+
+
+/* Animation for Sign-up button */
+@keyframes Move {
+    0% {
+        margin-top: 10px;
+    }
+
+    50% {
+        margin-top: 20px;
+    }
+
+    100% {
+        margin-top: 10px;
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width:850px) {
+
+    .Sign-up-form button {
+        font-size: 10px;
+    }
+
+    .Sign-up-form input {
+        width: 800px;
+        height: 25px;
+        font-size: 8px;
+    }
+
+    .Sign-up-form label {
+        font-size: 8px;
+    }
+
+    .links {
+        margin: 0 auto;
+    }
+
+    .links a {
+        font-size: 10px;
+    }
+
+}
